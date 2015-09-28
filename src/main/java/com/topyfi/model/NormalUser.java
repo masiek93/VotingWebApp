@@ -2,11 +2,30 @@ package com.topyfi.model;
 
 import java.util.ArrayList;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
+@Entity(name = "NORMAL_USER")
 public class NormalUser extends RandomUser {
+/*	@Id @GeneratedValue
+	private int userId;*/
 	private String name;
 	private String lastName;
 	private int phoneNumber;
 	private ArrayList<Integer> resolutionsIDList = new ArrayList<Integer>();
+	@OneToOne(cascade = {CascadeType.ALL})
+	private Address address;
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
 
 	public String getName() {
 		return name;

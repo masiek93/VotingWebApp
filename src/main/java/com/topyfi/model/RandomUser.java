@@ -1,7 +1,11 @@
 package com.topyfi.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class RandomUser {
-	
+	@Id
 	private String userLogin;
 	private String userPassword;
 	

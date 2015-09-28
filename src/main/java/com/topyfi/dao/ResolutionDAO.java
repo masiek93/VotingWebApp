@@ -1,6 +1,6 @@
 package com.topyfi.dao;
 
-public interface ResolutionDAO {
+public interface ResolutionDao {
 	public void updateYesAnswer();
 	public void updateNoAnswer();
 	public void updateNoOpinionAnswer();

@@ -1,7 +1,16 @@
 package com.topyfi.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "ADDRESS")
 public class Address {
 	/* i assume that the apartmentNumb and buildingNumb are numbers */
+	@Id @GeneratedValue
+	private int addressId;
 	private String streetName;
 	private int buildingNumb;
 	private int apartmentNumb;
